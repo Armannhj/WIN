@@ -1,3 +1,7 @@
+# Get-ADGroupMember -identity "Tölvubraut" -recursive | %{Get-ADUser $_ -property displayname} | Select samaccountname | Export-CSV "C:\Users\Administrator\Documents\Powershell\File.csv" 
+# Býr til csv file fyrir setup. 
+
+
 ﻿$notendur = Import-Csv C:\Users\Administrator\Documents\Powershell\file.csv
 
 foreach($n in $notendur){
